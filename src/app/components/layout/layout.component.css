@@ -1,0 +1,25 @@
+
+.container {
+    padding: .5rem;
+    margin: 0px;
+    background-color: rgb(55, 56, 81);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imgpage {
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.accslog {
+    background-color: black;
+
+}
+
+h3 {padding-top: 1000px;
+    background-color: rgb(171, 171, 171);}
