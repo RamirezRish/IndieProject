@@ -1,25 +1,48 @@
 
-.container {
-    padding: .5rem;
-    margin: 0px;
-    background-color: rgb(55, 56, 81);
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
+    .container{
+        background-color: rgb(156, 177, 213);
+        max-width: 100%;
+        height: 2.3rem;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+    }
 
-.imgpage {
-    padding: 5px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
+    .imgp{
+        margin: 0px;
+        padding: .2rem;
+        position: absolute;
+        left: 1rem;
+        opacity: .8;
+    }
+    .imgpage{
+        width: 1.8rem;
+        border-radius: 50%;
+        border: 2px rgba(53, 92, 133, 0.617) groove;
+    }
+    .imgp:hover{
+        opacity:1
+    }
 
-.accslog {
-    background-color: black;
+    .opclay{
+        background-color: rgba(72, 126, 184, 0.617);
+        margin: 4px;
+        padding: 2px;
+        height: 1.7rem;
+        border-radius: .2rem;
+        border: 2px rgba(53, 92, 133, 0.617) groove;
+        box-shadow: 2px 2px rgba(31, 55, 81, 0.836);
+        font-size: .8rem;
+        opacity: .8;
+    }
+    .opclay:hover{
+        opacity: 1;
+    }
 
-}
+    h3            {
+        margin-top: 4rem;
+    }
+    
 
-h3 {padding-top: 1000px;
-    background-color: rgb(171, 171, 171);}

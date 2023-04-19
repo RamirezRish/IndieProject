@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LayoutComponent } from './components/layout/layout.component';
+import { TextBox1Component } from './components/text-box1/text-box1.component';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,5 @@ import { LayoutComponent } from './components/layout/layout.component';
 })
 export class AppComponent {
   title = 'IndieProject';
+
 }

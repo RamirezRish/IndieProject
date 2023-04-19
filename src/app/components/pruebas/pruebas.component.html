@@ -1,0 +1,57 @@
+ <!--Dynamic Text 
+            <div>
+                <P>Dynamic Text: {{tittleOne.value}}</P>
+                
+                <input type="text" name="" id="" value="" #tittleOne (keydown<<con esto se expresa el valor>>)="0">
+                <input type="button" name="" id="" value="go!" (click)="initialEvent(tittleOne.value)"> 
+                <input type="button" (click)="reveal()">
+            
+            </div> 
+        -->
+    
+<!--A revisar (me olvidé) 
+----------------------------------------------------------------------------------------------
+
+<h3>Input</h3>
+<form method="post" action="nose">
+    <label for="name">Nombre:</label>
+    <input type="text" name="nombre">
+</form> 
+----------------------------------------------------------------------------------------------
+-->
+
+
+<div>
+    <p>
+        Acá se va a tocar un ejemplo de Property Binding: {{nameExmpl.value}} {{lastnameExmpl.value}}, de edad: {{ageExmpl.value}} años, se ha inscripto.
+    </p>
+
+    Nombre: <input type="text" value="" #nameExmpl (keyup)="0" [disabled]="exampleProperty" >
+    <br>
+    Apellido: <input type="text" value="" #lastnameExmpl (keyup)="0" [disabled]="exampleProperty" >
+    <br>
+    Edad: <input type="text" value="" #ageExmpl (keyup)="0" [disabled]="exampleProperty" >
+    <br><br><br>
+
+    Registro: <input type="checkbox" id="" [checked]="userLoginProperty" (click)="userLoginProperty">
+    <br><br>
+    <input type="button" value="Click!!!!" (click)="setDateUser(nameExmpl.value,lastnameExmpl.value,ageExmpl.value) ">
+    <br><br><br>
+
+    <p>
+        Pagará con tarjeta Visa o Mastercard?
+    </p>
+    Visa 
+    <input type="radio" value=5000 name="card" (click)="setCard($event)">
+    Mastercard
+    <input type="radio" value=900 name="card" (click)="setCard($event)">
+
+    <br>
+    <br>
+    <p>
+        Ejemplo de Two Way Binding: twd ({{twoWayDate}})
+    </p>
+    <input type="text" [(ngModel)]="twoWayDate">
+
+</div>
+
