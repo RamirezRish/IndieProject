@@ -8,5 +8,8 @@ import { TextBox1Component } from './components/text-box1/text-box1.component';
 })
 export class AppComponent {
   title = 'IndieProject';
+  
+  pruebasComponent = true;
 
+  
 }
