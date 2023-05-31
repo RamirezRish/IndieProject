@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from './character.model';
+import { PjSService } from './pj-s.service';
 
 @Component({
   selector: 'app-pruebas',
@@ -84,16 +85,7 @@ export class PruebasComponent  {
   date4:string[]=["Name","Subname","Type","Level"];
   counter:number=0;
   validator4:boolean=true;
-  
-
-  character:Character[]=[
-    new Character("Shenhe", "Uesugi", "Exsorcist", 13),
-    new Character("Miku", "Nakano", "Human", 1),
-    new Character("Inori", "Yuzuriha", "Human", 3),
-    new Character("Alice", "Nakiri", "Human", 1),
-    new Character("Inori", "Yuzuriha", "Human", 3),
-  
-  ]
+  character:Character[]=[];
 
   addDate(){
    if (!(this.value4=="")){
@@ -108,12 +100,11 @@ export class PruebasComponent  {
   };
   gCard(){
     this.validator4=true;
-    this.character.push(new Character(this.valueCh[0],this.valueCh[1],this.valueCh[2],parseInt(this.valueCh[3])))
+    this.pjLS.addPj(this.valueCh,`Se ha agregado a ${this.valueCh[1]} ${this.valueCh[0]}.`);
   };
 
   // Constructor
-  constructor(){ 
-
+  constructor(private pjLS:PjSService){ 
     this.pjList=[
       {nick:"Inori"},
       {nick:"Yuu"},
@@ -121,6 +112,8 @@ export class PruebasComponent  {
       {nick:"Knd"},
       {nick:"Esdeath"}
     ];
+
+    this.character=this.pjLS.character
   };
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { WindowServiceService } from 'src/app/components/pruebas/window-service.service';
 
 @Component({
   selector: 'app-extent',
@@ -17,10 +18,11 @@ export class ExtentComponent implements OnInit {
 
 
   addCharPj(value:string){
+    this.alertS1.alertMessage(`Se ha agregado la característica "${value}"`)
     this.extensionPj.emit(value);
   }
 
-  constructor() { }
+  constructor(private alertS1:WindowServiceService) { }
 
   ngOnInit(): void {
   }

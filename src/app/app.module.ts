@@ -12,6 +12,8 @@ import { PruebasComponent } from './components/pruebas/pruebas.component'
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './components/pruebas/card/card.component';
 import { ExtentComponent } from './components/pruebas/card/extent/extent.component';
+import { WindowServiceService } from './components/pruebas/window-service.service';
+import { PjSService } from './components/pruebas/pj-s.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { ExtentComponent } from './components/pruebas/card/extent/extent.compone
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    WindowServiceService,
+    PjSService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
