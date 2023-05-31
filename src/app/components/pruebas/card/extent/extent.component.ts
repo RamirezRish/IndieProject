@@ -4,7 +4,7 @@ import { WindowServiceService } from 'src/app/components/pruebas/window-service.
 @Component({
   selector: 'app-extent',
   templateUrl: './extent.component.html',
-  styleUrls: ['./extent.component.css']
+  styleUrls: ['./extent.component.css'],
 })
 export class ExtentComponent implements OnInit {
 

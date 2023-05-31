@@ -1,0 +1,20 @@
+.about-me{
+    display:inline-flex;
+    min-width: 100%;
+    border: 2px solid rgba(55, 55, 55, 0.09);
+    border-radius: .3rem;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+} 
+.position{
+    margin: 2rem;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgba(55, 55, 55, 0.05);
+    border-radius: .3px;
+}
+.box1{
+    max-width: 10rem;
+}
+.box2{
+    max-width: 30rem;
+}

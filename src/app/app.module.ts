@@ -14,6 +14,7 @@ import { CardComponent } from './components/pruebas/card/card.component';
 import { ExtentComponent } from './components/pruebas/card/extent/extent.component';
 import { WindowServiceService } from './components/pruebas/window-service.service';
 import { PjSService } from './components/pruebas/pj-s.service';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PjSService } from './components/pruebas/pj-s.service';
     PruebasComponent,
     CardComponent,
     ExtentComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
