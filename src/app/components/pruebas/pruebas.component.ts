@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from './character.model';
 
 @Component({
   selector: 'app-pruebas',
@@ -75,7 +76,42 @@ export class PruebasComponent  {
     if (!((this.name2 && this.subname2)=="")) {this.validator = true};
   };
 
+  // compilación de conocimientos (app para crear stats de personajes <<basic>>)
 
+  placeh:string="Name"
+  value4:string="";
+  valueCh:any[]=[];
+  date4:string[]=["Name","Subname","Type","Level"];
+  counter:number=0;
+  validator4:boolean=true;
+  
+
+  character:Character[]=[
+    new Character("Shenhe", "Uesugi", "Exsorcist", 13),
+    new Character("Miku", "Nakano", "Human", 1),
+    new Character("Inori", "Yuzuriha", "Human", 3),
+    new Character("Alice", "Nakiri", "Human", 1),
+    new Character("Inori", "Yuzuriha", "Human", 3),
+  
+  ]
+
+  addDate(){
+   if (!(this.value4=="")){
+    this.valueCh[this.counter]=this.value4;
+    this.counter++; 
+    this.placeh=this.date4[this.counter];
+    this.value4=""; 
+   }
+    console.log(this.counter);
+    if (this.counter == 4)
+    {console.log(this.valueCh);this.counter = 0;this.validator4=false; this.placeh="Name"}
+  };
+  gCard(){
+    this.validator4=true;
+    this.character.push(new Character(this.valueCh[0],this.valueCh[1],this.valueCh[2],parseInt(this.valueCh[3])))
+  };
+
+  // Constructor
   constructor(){ 
 
     this.pjList=[
@@ -85,8 +121,7 @@ export class PruebasComponent  {
       {nick:"Knd"},
       {nick:"Esdeath"}
     ];
-    console.log(this.pjList);
-  }
+  };
 
   ngOnInit(): void {
   }

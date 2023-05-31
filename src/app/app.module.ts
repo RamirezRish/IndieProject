@@ -10,6 +10,8 @@ import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.com
 import { TextBox1Component } from './components/text-box1/text-box1.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component'
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './components/pruebas/card/card.component';
+import { ExtentComponent } from './components/pruebas/card/extent/extent.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { FormsModule } from '@angular/forms';
     LateralMenuComponent,
     TextBox1Component,
     PruebasComponent,
+    CardComponent,
+    ExtentComponent,
   ],
   imports: [
     BrowserModule,

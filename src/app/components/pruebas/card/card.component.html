@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="card3">
+        {{pjI.name3}} {{pjI.subname3}} {{pjI.type3}} <span [ngStyle]="{color: pjI.level3>10 ? 'blue' : 'black'}">{{pjI.level3}}</span>
+        <ul style="list-style: none;">
+            <li *ngFor="let char of characteristics">{{char}}
+            </li>
+        </ul>
+    </div>
+    <app-extent (extensionPj)="addDate($event)"></app-extent> <!-- esto significa que "extensionPj" se guarda en addDate -->
+</div>

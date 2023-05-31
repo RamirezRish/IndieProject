@@ -62,7 +62,35 @@
         <p>Insert date</p>
     </ng-template>
     <br><br>
+    <p></p>
+    <br>
     <ul>
         <li *ngFor="let pj of pjList; let i=index">  {{i+1}})  <span style="font:large;font-weight:bold;">{{pj.nick}}</span></li>
     </ul>
+</div> 
+<br><br><br><br><h4>Recopilando un poco (índice #3-#4)</h4><br><br>
+<div class="container">
+    <div class="rows">
+        <div class="intro">
+            <form *ngIf="validator4; else altern4">
+                <input type="text" name="values" placeholder="{{placeh}}" [(ngModel)]="value4" minlength="1" (keyup.enter)="addDate()" [ngClass]="{classB: value4=='Shinobi'}">
+                <input type="button" name="submit" value="Enviar" (click)="addDate()" [ngClass]="{classB: value4=='Shinobi'}">
+            </form>
+            <ng-template #altern4>
+                <form>
+                    <input type="button" value="Cargar" (click)="gCard()">
+                </form>
+            </ng-template>
+        </div>
+        <div class="column">
+            <app-card *ngFor="let pj of character" [pjI]="pj"></app-card>
+        </div>
+            <!-- <div class="column">
+                <div class="card3" *ngFor="let pj of character">
+                    {{pj.name3}} {{pj.subname3}} {{pj.type3}} <span [ngStyle]="{color: pj.level3>10 ? 'blue' : 'black'}">{{pj.level3}}</span>
+                </div>
+            </div> -->
+    </div>
 </div>
+
+<!-- [(ngModel)]="value4" -->

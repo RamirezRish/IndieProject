@@ -1,0 +1,21 @@
+.button5{
+    position: relative;
+    left: 12.3rem;
+    top: -2.6rem;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px .4rem rgba(18, 18, 18, 0.545);
+    background-color: rgba(177, 99, 223, 0.351);
+}
+.inp15{
+    max-width: 7rem;
+}
+.img5{
+    width: 25px;
+    height: 25px;
+    border-radius: 1rem;
+    opacity: .7;
+}
+.alt5{
+    left:19rem;
+    top:-4.5rem
+}
