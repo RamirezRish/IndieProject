@@ -1,0 +1,86 @@
+.container{
+    background-color: rgba(0, 0, 0, 0.402);
+    border: 2px solid rgba(0, 0, 0, 0.538);
+    border-radius: 3rem 3rem 0 3rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.9) inset;
+    height: 40rem;
+}
+.sect{
+    background-color: rgba(0, 0, 0, 0.825);
+    border-radius: 5rem;
+    box-shadow: 0 0 4rem rgba(255, 255, 255, 0.919) inset;
+    text-align: center;
+    margin: 2rem;
+    }
+.two{
+    font-size: 1.9rem;
+    color: white;
+    padding: 2rem;
+    font-family: 'lato';
+
+    animation: glitch 3s infinite;
+}
+/* .one::before {
+    content: attr(data);
+    color: rgba(143, 140, 140, 0.99);
+    display: inline-block;
+    position: relative;
+    left: 9rem;
+    animation: glitch 3s infinite;
+}                                           efecto glitch v.01*/
+.one{
+    font-size: 4.5rem;
+    font-family: 'lato';
+    color: rgba(255, 255, 255, 0.814);    
+    position: relative;
+    bottom: -3.5rem;
+
+    text-align: center;
+    margin: 0;
+    animation: glitch 3s infinite;
+}
+.return{
+    position: absolute;
+    bottom: 12rem;
+    right: 6rem;
+}
+
+@keyframes glitch{
+    0%{
+        text-shadow: 
+            rgb(242, 228, 31) 0.02rem 0rem,
+            rgb(0, 8, 255) -0.02rem 0rem;
+    }
+    50%{
+        text-shadow: 
+            rgb(255, 0, 0) -.2rem 0rem,
+            rgb(0, 255, 242) .2rem 0rem;
+    }
+    100%{
+        text-shadow: 
+            rgb(242, 228, 31) -0.02rem 0rem,
+            rgb(0, 8, 255) 0.02rem 0rem;
+    }
+}
+
+/* @keyframes glitch {
+    0%  {
+        transform: skew(0);
+    }
+    20% {
+        transform: skew(-10deg);
+        color: #6700dc;
+    }
+    40% {
+        transform: skew(5deg);
+    }
+    60% {
+        transform: skew(-10deg);
+    }
+    80% {
+        transform: skew(5deg);
+    }
+    100% {
+        transform: skew(0);
+    }    
+}                                           efecto glitch v.01*/

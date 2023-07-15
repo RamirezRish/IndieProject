@@ -1,0 +1,23 @@
+<p>modify-card works!</p>
+<div class="container">
+    <div>
+        <p>Name</p>     <input type="text" [(ngModel)]="name5">
+        <p>Subname</p>  <input type="text" [(ngModel)]="subname5"> 
+        <p>Type</p>     
+            <select [(ngModel)]="type5">
+                <option value="Other">{{type5}}</option>
+                <option value="Human">Human</option>
+                <option value="Wizard">Wizard</option>
+                <option value="Shinobi">Shinobi</option>
+                <option value="Other">Other</option>
+                
+            </select> <br><br>
+        <p>level</p>    <input type="number" [(ngModel)]="lvl5"> <br><br>
+        <div>
+            <input type="submit" value="{{mod_button}}" (click)="mod_delCh5()">
+            <!-- <input type="submit" value="Delete" (click)="del()">   -->
+            <app-button-g [value_btn]="'Volver'" [link1]="'/pruebas'"></app-button-g> 
+        </div> 
+    </div>
+    
+</div>

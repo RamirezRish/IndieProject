@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Character } from '../character.model';
+import { PjSService } from '../pj-s.service';
 
 @Component({
   selector: 'app-card',
@@ -9,6 +10,7 @@ import { Character } from '../character.model';
 export class CardComponent implements OnInit {
 
   @Input() pjI:Character;
+  @Input() i:number;
 
 
 
@@ -18,9 +20,12 @@ export class CardComponent implements OnInit {
 
   addDate(newDate:string) {
     this.characteristics.push(newDate);
+  };
+  delDate(i:number){
+    this.pjLs.del_char(i)
   }
 
-  constructor() { }
+  constructor(private pjLs:PjSService) { }
 
   ngOnInit(): void {
   }

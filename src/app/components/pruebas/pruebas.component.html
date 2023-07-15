@@ -1,96 +1,107 @@
- <!--Dynamic Text 
-            <div>
-                <P>Dynamic Text: {{tittleOne.value}}</P>
-                
-                <input type="text" name="" id="" value="" #tittleOne (keydown<<con esto se expresa el valor>>)="0">
-                <input type="button" name="" id="" value="go!" (click)="initialEvent(tittleOne.value)"> 
-                <input type="button" (click)="reveal()">
-            
-            </div> 
-        -->
-    
-<!--A revisar (me olvidé) 
-----------------------------------------------------------------------------------------------
-
-<h3>Input</h3>
-<form method="post" action="nose">
-    <label for="name">Nombre:</label>
-    <input type="text" name="nombre">
-</form> 
-----------------------------------------------------------------------------------------------
--->
-
-
-<div>
-    <p>
-        Acá se va a tocar un ejemplo de Property Binding: {{nameExmpl.value}} {{lastnameExmpl.value}}, de edad: {{ageExmpl.value}} años, se ha inscripto.
-    </p>
-    Nombre: <input type="text" value="" #nameExmpl (keyup)="0" [disabled]="exampleProperty" >
-    <br>
-    Apellido: <input type="text" value="" #lastnameExmpl (keyup)="0" [disabled]="exampleProperty" >
-    <br>
-    Edad: <input type="text" value="" #ageExmpl (keyup)="0" [disabled]="exampleProperty" >
-    <br><br><br>
-    Registro: <input type="checkbox" id="" [checked]="userLoginProperty" (click)="userLoginProperty">
-    <br><br>
-    <input type="button" value="Click!!!!" (click)="setDateUser(nameExmpl.value,lastnameExmpl.value,ageExmpl.value) ">
-    <br><br><br>
-    <p>
-        Pagará con tarjeta Visa o Mastercard?
-    </p>
-    Visa 
-    <input type="radio" value=5000 name="card" (click)="setCard($event)">
-    Mastercard
-    <input type="radio" value=900 name="card" (click)="setCard($event)">
-    <br>
-    <br>
-    <p>
-        Ejemplo de Two Way Binding: twd ({{twoWayDate}})
-    </p>
-    <input type="text" [(ngModel)]="twoWayDate">
-</div>
-<br><br><br><br><h2>Directivas</h2><br><br>
-<div class="directives">
-    <h1 style="text-align: center;">{{title}}</h1>
-    <form>
-        <input type="text" name="name" [(ngModel)]="name2"> <br>
-        <input type="text" name="subname" [(ngModel)]="subname2"><br>
-        <input type="submit" value="sing Up" (click)="signUp()">
-    </form>
-    <br><p *ngIf="validator; else altern1">{{message}}</p>
-    <ng-template #altern1>
-        <p>Insert date</p>
-    </ng-template>
-    <br><br>
-    <p></p>
-    <br>
-    <ul>
-        <li *ngFor="let pj of pjList; let i=index">  {{i+1}})  <span style="font:large;font-weight:bold;">{{pj.nick}}</span></li>
-    </ul>
-</div> 
-<br><br><br><br><h4>Recopilando un poco (índice #3-#4)</h4><br><br>
 <div class="container">
-    <div class="rows">
-        <div class="intro">
-            <form *ngIf="validator4; else altern4">
-                <input type="text" name="values" placeholder="{{placeh}}" [(ngModel)]="value4" minlength="1" (keyup.enter)="addDate()" [ngClass]="{classB: value4=='Shinobi'}">
-                <input type="button" name="submit" value="Enviar" (click)="addDate()" [ngClass]="{classB: value4=='Shinobi'}">
-            </form>
-            <ng-template #altern4>
-                <form>
-                    <input type="button" value="Cargar" (click)="gCard()">
-                </form>
-            </ng-template>
-        </div>
-        <div class="column">
-            <app-card *ngFor="let pj of character" [pjI]="pj"></app-card>
-        </div>
-            <!-- <div class="column">
-                <div class="card3" *ngFor="let pj of character">
-                    {{pj.name3}} {{pj.subname3}} {{pj.type3}} <span [ngStyle]="{color: pj.level3>10 ? 'blue' : 'black'}">{{pj.level3}}</span>
-                </div>
-            </div> -->
-    </div>
-</div>
+    <!--Dynamic Text 
+                <div>
+                    <P>Dynamic Text: {{tittleOne.value}}</P>
+                    
+                    <form>
+                        <input type="text" name="" id="" value="" #tittleOne (keydown<<con esto se expresa el valor>>)="0">
+                        <input type="button" name="" id="" value="go!" (click)="initialEvent(tittleOne.value)"> 
+                        <input type="button" (click)="reveal()">
+                    </form>
+                </div> 
+            -->
+        
+    <!--A revisar (me olvidé) 
+    ----------------------------------------------------------------------------------------------
 
-<!-- [(ngModel)]="value4" -->
+    <h3>Input</h3>
+    <form method="post" action="nose">
+        <label for="name">Nombre:</label>
+        <input type="text" name="nombre">
+    </form> 
+    ----------------------------------------------------------------------------------------------
+    -->
+
+    
+    <div>
+        <p>
+            Acá se va a tocar un ejemplo de Property Binding: {{nameExmpl.value}} {{lastnameExmpl.value}}, de edad: {{ageExmpl.value}} años, se ha inscripto.
+        </p>
+        <form>
+            Nombre:     <input type="text" value="" #nameExmpl      (keyup)="0" [disabled]="exampleProperty" >
+            <br>
+            Apellido:   <input type="text" value="" #lastnameExmpl  (keyup)="0" [disabled]="exampleProperty" >
+            <br>
+            Edad:       <input type="text" value="" #ageExmpl       (keyup)="0" [disabled]="exampleProperty" >
+            <br><br><br>
+            Registro:   <input type="checkbox" id="" [checked]="userLoginProperty" (click)="userLoginProperty">
+            <br><br>
+            <input type="button" value="Click!!!!" (click)="setDateUser(nameExmpl.value,lastnameExmpl.value,ageExmpl.value) ">
+        </form>
+        <br><br><br>
+        <p>
+            Pagará con tarjeta Visa o Mastercard?
+        </p>
+       
+        Visa 
+        <input type="radio" value=5000 name="card" (click)="setCard($event)">
+        Mastercard
+        <input type="radio" value=900 name="card" (click)="setCard($event)">
+       
+        <br>
+        <br>
+        <p>
+            Ejemplo de Two Way Binding: twd ({{twoWayDate}})
+        </p>
+        <input type="text" [(ngModel)]="twoWayDate">
+    </div>
+    <br><br><br><br><h2>Directivas</h2><br><br>
+    <div class="directives">
+        <h1 style="text-align: center;">{{title}}</h1>
+        <form>
+            <input type="text" name="name" [(ngModel)]="name2"> <br>
+            <input type="text" name="subname" [(ngModel)]="subname2"><br>
+            <input type="submit" value="sing Up" (click)="signUp()">
+        </form>
+        <br><p *ngIf="validator; else altern1">{{message}}</p>
+        <ng-template #altern1>
+            <p>Insert date</p>
+        </ng-template>
+        <br><br><br>
+        <ul>
+            <li *ngFor="let pj of pjList; let i=index">  {{i+1001}}  <span style="font:large;font-weight:bold;">{{pj.nick}}</span></li>
+        </ul>
+    </div> 
+    <br><br><br><br><h4>Recopilando un poco (índice #3-#4)</h4><br><br>
+    <div class="contain">
+        <div class="rows">
+            <div class="intro">
+                <form *ngIf="validator4; else altern4">
+                    <input type="text"      name="values" placeholder="{{placeh}}" [(ngModel)]="value4" minlength="1" (keyup.enter)="addDate()" [ngClass]="{classB: value4=='Shinobi'}">
+                    <input type="button"    name="submit" value="Enviar" (click)="addDate()" [ngClass]="{classB: value4=='Shinobi'}">
+                </form>
+                <ng-template #altern4>
+                    <form>
+                        <input type="button" value="Cargar" (click)="gCard()">
+                    </form>
+                </ng-template>
+            </div>
+            <div class="column">
+                <app-card *ngFor="let pj of characters; let id=index" [pjI]="pj"  [i]="id+1"></app-card>
+            </div>
+                <!-- <div class="column">
+                    <div class="card3" *ngFor="let pj of character">
+                        {{pj.name3}} {{pj.subname3}} {{pj.type3}} <span [ngStyle]="{color: pj.level3>10 ? 'blue' : 'black'}">{{pj.level3}}</span>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+
+    <!-- [(ngModel)]="value4" -->
+
+    <h2>Botón de pruebas</h2>
+    <app-button-g [value_btn]="'Botón'" [link1]="'/about-me'"></app-button-g>
+
+    <button class="bnt1" (click)="return()">Volver</button> <!-- no tiene estilos -->
+
+</div>

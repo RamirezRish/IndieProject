@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TextBox1Component } from './components/text-box1/text-box1.component';
 
 
 @Component({

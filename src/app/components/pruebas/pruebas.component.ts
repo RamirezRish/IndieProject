@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from './character.model';
 import { PjSService } from './pj-s.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pruebas',
@@ -74,7 +75,7 @@ export class PruebasComponent  {
 
   signUp(){
     this.message = `El usuario se ha registrado con éxito. Suerte ${this.subname2}, ${this.name2}.`;
-    if (!((this.name2 && this.subname2)=="")) {this.validator = true};
+    if (!((this.name2 && this.subname2)=="")) {this.validator = true; this.return()};
   };
 
   // compilación de conocimientos (app para crear stats de personajes <<basic>>)
@@ -85,7 +86,8 @@ export class PruebasComponent  {
   date4:string[]=["Name","Subname","Type","Level"];
   counter:number=0;
   validator4:boolean=true;
-  character:Character[]=[];
+
+  characters:Character[]=[];
 
   addDate(){
    if (!(this.value4=="")){
@@ -94,17 +96,23 @@ export class PruebasComponent  {
     this.placeh=this.date4[this.counter];
     this.value4=""; 
    }
-    console.log(this.counter);
+    // console.log(this.counter);
     if (this.counter == 4)
-    {console.log(this.valueCh);this.counter = 0;this.validator4=false; this.placeh="Name"}
+    {this.counter = 0;this.validator4=false; this.placeh="Name"}
   };
   gCard(){
     this.validator4=true;
     this.pjLS.addPj(this.valueCh,`Se ha agregado a ${this.valueCh[1]} ${this.valueCh[0]}.`);
   };
 
+  // Pruebas para el retorno a home por botón (clase Router)
+  return(){
+    this.router.navigate([""])
+  }
+
+
   // Constructor
-  constructor(private pjLS:PjSService){ 
+  constructor(private pjLS:PjSService, private router:Router){ 
     this.pjList=[
       {nick:"Inori"},
       {nick:"Yuu"},
@@ -113,9 +121,15 @@ export class PruebasComponent  {
       {nick:"Esdeath"}
     ];
 
-    this.character=this.pjLS.character
+    // this.characters=this.pjLS.characters
   };
 
   ngOnInit(): void {
+    this.pjLS.returnChs().subscribe(
+      charU=>{
+        this.characters=Object.values(charU);
+        this.pjLS.setChs(this.characters)
+      }
+    );
   }
 }

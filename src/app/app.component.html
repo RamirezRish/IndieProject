@@ -1,19 +1,17 @@
-<div class="container">
-    
-    <app-about-me></app-about-me>
-
-
-    <div class="pruebas" *ngIf="pruebasComponent">
-        <app-pruebas></app-pruebas>
+<div class="container">  
+    <router-outlet></router-outlet>
+    <div>
+        <app-lateral-menu></app-lateral-menu>
+        <div class="layout">
+            <div class="imgp" >
+                <img class="imgpage"src="../../../assets/images/index.jpg" alt="logotype">
+            </div>
+            <!-- acá deberían ir un par de estos divs para esquina superior derecha (layout)-->
+            <div class="opclay"><p>Algo importante</p></div>
+            <div class="opclay">                            <a href="/about-me">About me</a></div>
+            <div class="opclay">                            <a href="/experience">Experience</a></div>
+            <div class="opclay" *ngIf="pruebasComponent">   <a href="/pruebas">Examples</a></div>
+            <div class="opclay">                            <a href="/error">Error Page</a></div>
+        </div>
     </div>
 </div>
-
-
-
-
-<div>
-    <app-banner></app-banner>
-    <app-layout></app-layout>
-    <app-lateral-menu></app-lateral-menu>
-</div>
-
