@@ -23,12 +23,22 @@ import { ButtonG2Component }    from './components/buttons/button-g2/button-g2.c
 import { E1PageComponent }      from './components/e1-page/e1-page.component';
 import { DataServices }         from './data.services';
 import { HttpClientModule }     from '@angular/common/http';
+import { LogInComponent }       from './log-in/log-in.component';
+import { LoginServices }        from './log-in/login.service';
+import { CookieService }        from 'ngx-cookie-service';
+import { TextBox2Component } from './components/text-box2/text-box2.component';
+import { HSSkillsComponent } from './h-s-skills/h-s-skills.component';
+import { ContactComponent } from './contact/contact.component';
+import { Card01Component } from './components/card01/card01.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 const appRoutes:Routes=[
   {path:'about-me',     component:HomeComponent},
+  {path:'',             component:HomeComponent},
   {path:'experience',   component:ExperienceComponent},
   {path:'pruebas',      component:PruebasComponent},
   {path:'mod-card/:id', component:ModifyCardComponent},
+  {path:'login',        component:LogInComponent},
   {path:'error',        component:E1PageComponent},
   {path:'**',           component:E1PageComponent},
 ]
@@ -50,6 +60,12 @@ const appRoutes:Routes=[
     ModifyCardComponent,
     ButtonG2Component,
     E1PageComponent,
+    LogInComponent,
+    TextBox2Component,
+    HSSkillsComponent,
+    ContactComponent,
+    Card01Component,
+    ProjectsComponent,
   ],
   exports: [
   ],
@@ -63,7 +79,9 @@ const appRoutes:Routes=[
   providers: [
     WindowServiceService,
     PjSService,
-    DataServices
+    DataServices,
+    LoginServices,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

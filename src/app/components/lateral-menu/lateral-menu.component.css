@@ -7,24 +7,10 @@ nav{
     bottom: 0px;
     left: 0px;
 }
+
 .dropdown-menuP{
     list-style: none;
 }
-.dropdown-menuP > li > a{
-    display: inline-block;
-    font-size: .8rem;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    position: relative;
-    right: 1.4rem;
-    background-color: rgb(156, 177, 213);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: .2rem;
-    top: 20rem;
-    border-radius: 0% 1rem 1rem 0%;
-}
-
 
 .despliegue{
     list-style: none;
@@ -41,11 +27,6 @@ nav{
     border-radius: 0% 0px .3rem;
 
 }
-.dropdown-menuP > li:hover .despliegue {
-    display: block;
-    top: 2.3rem;
-    opacity: 1;
-}
 
 .margin{
     margin-top: 100rem;
@@ -61,16 +42,39 @@ nav{
     border: .2rem groove rgb(101, 140, 206);
     opacity: .8;
 }
+
+.dropdown-menuP > li > a{
+    display: inline-block;
+    font-size: .8rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    right: 1.4rem;
+    background-color: rgb(156, 177, 213);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: .2rem;
+    top: 20rem;
+    border-radius: 0% 1rem 1rem 0%;
+    
+}
+
 .menu-option:hover {
     opacity: 1;
 }
 
-/*ES PARA OSCURECER EL FONDO
+.dropdown-menuP > li:hover .despliegue {
+    display: block;
+    top: 2.3rem;
+    opacity: 1;
+    
+}
+
+/* ES PARA OSCURECER EL FONDO
 .opacity{
     background-color: rgba(51, 51, 51, 0.5);
     min-width: 100%;
     min-height: 100%;
     position: fixed;
     opacity: 0;
-}
-*/
+} */

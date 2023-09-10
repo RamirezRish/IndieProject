@@ -1,6 +1,6 @@
 .container{
-    height: 60rem;
-    margin-bottom: 15rem;
+    /* height: 60rem; */
+    position: relative;
 }
 .about-me{
     display:inline-flex;
@@ -15,10 +15,15 @@
     background-color: rgb(240, 240, 240);
     border: 2px solid rgba(55, 55, 55, 0.05);
     border-radius: .3px;
+    position: relative;
 }
 .box1{
     max-width: 10rem;
 }
 .box2{
     max-width: 30rem;
+}
+.box3{
+    background-color: rgba(240, 240, 240, 0.259);
+    max-width: 51rem;
 }

@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Character } from './character.model';
 import { PjSService } from './pj-s.service';
 import { Router } from '@angular/router';
+import { LoginServices } from 'src/app/log-in/login.service';
 
 @Component({
   selector: 'app-pruebas',
   templateUrl: './pruebas.component.html',
   styleUrls: ['./pruebas.component.css']
 })
+
+
 export class PruebasComponent  {
 
   // las variables y funciones están ligadas a las de <text-box1>
@@ -32,6 +35,7 @@ export class PruebasComponent  {
   card:number=0.1;
   statecard:string="";
   twoWayDate:string="TwoWayBinding";
+  editor:boolean=false;
 
   buttonNegative(){
     if (this.userLoginProperty == false){
@@ -61,6 +65,9 @@ export class PruebasComponent  {
     else{this.statecard="Fondos insuficientes para cualquier operación \n CARGÁ PLATA, RATA!."};
     console.log(this.card)    
   };
+  editorMode(){
+    this.editor = !this.editor;
+  };
   
 
   // directivas
@@ -80,12 +87,13 @@ export class PruebasComponent  {
 
   // compilación de conocimientos (app para crear stats de personajes <<basic>>)
 
-  placeh:string="Name"
+  placeh:string="Name";
   value4:string="";
   valueCh:any[]=[];
   date4:string[]=["Name","Subname","Type","Level"];
   counter:number=0;
   validator4:boolean=true;
+  validator5:boolean;
 
   characters:Character[]=[];
 
@@ -112,7 +120,7 @@ export class PruebasComponent  {
 
 
   // Constructor
-  constructor(private pjLS:PjSService, private router:Router){ 
+  constructor(private pjLS:PjSService, private router:Router, private longinSv:LoginServices){ 
     this.pjList=[
       {nick:"Inori"},
       {nick:"Yuu"},
@@ -120,10 +128,66 @@ export class PruebasComponent  {
       {nick:"Knd"},
       {nick:"Esdeath"}
     ];
+    if(longinSv.token){this.validator5=true};
 
     // this.characters=this.pjLS.characters
   };
 
+  // FUNCIONES FLECHAS
+  duplicar(x:number):number {
+      return x*2;
+  }; 
+          // es igual a:
+  duplicador = (x:number)=> x*2;
+  varios = (x:TimeRanges, esC:boolean) => {
+      if(esC) return"sí";
+      return 42
+  };
+
+  // FUNCIONES ANÓNIMAS
+  addFunction (element:string){
+      document.getElementById(element)!.addEventListener('click', ()=>{console.log("esta función es anónima")})
+  };
+
+  // PROMESAS
+  money1:number = 1000;
+  promises (){
+      
+      console.log("Start");
+
+      const prom1 = new Promise( (resolve, reject )=>{
+        setTimeout(()=>{
+          // reject('Se terminó el timeout');
+          resolve('Se terminó el timeout')
+        }, 1000);
+      });
+      prom1 
+            .then(message => console.log(message  + " (resolve)"))
+            .catch( error => console.warn(error   + " (reject)"));
+      console.log("End");
+      
+  };
+  promises2(){
+      const retirarDinero = (montoRetirar:number):Promise<number>=>{
+        let dineroActual = 1000;
+
+        return new Promise((resolve, reject)=>{
+          if (montoRetirar > this.money1) {
+            reject('No hay suficientes fondos')
+          } else {
+            this.money1 -= montoRetirar;
+            resolve(this.money1);
+          }
+        });
+      };
+      retirarDinero(1000)
+        .then(montoAct => console.log(`Me quedan ${montoAct} dólares`))
+        // .catch(()=> console.warn("Dinero insuficiente"));
+        .catch(console.warn);
+  };
+
+
+  // ---------------------------------------------------------
   ngOnInit(): void {
     this.pjLS.returnChs().subscribe(
       charU=>{

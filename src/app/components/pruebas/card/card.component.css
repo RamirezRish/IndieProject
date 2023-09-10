@@ -1,6 +1,8 @@
 
 .card3{
-    background-image: url(./../../../../assets/images/card3.jpeg);
+    /* background-image: url(./../../../../assets/images/card3.jpeg); */
+    /* background-image: linear-gradient(60deg, rgba(28, 95, 212, 0.331) 20%, rgba(41, 129, 184, 0.343) 50%, rgba(79, 103, 120, 0.503)); */
+    background-image: radial-gradient(at 5rem 3rem, rgba(126, 92, 204, 0.596) , rgba(105, 170, 210, 0.547) , rgba(111, 135, 152, 0.689));
     opacity: .85;
     padding: 1rem;
     margin: 1rem;

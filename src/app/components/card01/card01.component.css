@@ -1,0 +1,43 @@
+.container{
+    /* background-image: url('../../../assets/images/calc.png'); */
+    /* background-image: url('../../../assets/images/background-card2.avif');
+    background-size: 18rem;
+    background-position: center; */
+    background: rgba(255, 255, 255, .2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 0 0 .8rem .2rem rgba(189, 184, 184, 0.752);
+    border-radius: .7rem;
+    width: 12rem;
+    height: 20rem;
+    
+}
+.card-img{
+    position:absolute;
+    width: 10rem;
+    right: -.3rem;
+    bottom: 3rem;
+    left: .97rem;
+
+    
+    /* border-radius: .4rem; */
+
+    /* background: rgba(255, 255, 255, .2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 0 0 .5rem .2rem rgba(172, 168, 168, 0.752); */
+
+}
+.ttl{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    top: 1.4rem;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 750;
+    letter-spacing: 3px;
+}
+

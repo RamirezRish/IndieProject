@@ -1,0 +1,53 @@
+.container{
+    background-color: rgb(95, 92, 92);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: azure;
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+    height: 14rem;
+    left: 0rem;
+    bottom:0;
+    align-items: center;
+    min-width: 100%;
+
+}
+.column{
+    margin-left: 4rem;
+}
+.contactlogo{
+    width:2rem;
+    height:2rem;
+    margin:.6rem;
+    opacity: .7;
+
+}
+.contactlogo:hover{
+    opacity: 1;
+    animation: xlr8 .3s ease;
+    transform: scale(1.4);
+    /* box-shadow: black 0 0 2px 2px; */
+    filter: drop-shadow(0 .16rem rgb(255, 255, 255))
+            drop-shadow(0 0 .5rem rgb(255, 255, 255))
+
+}
+li {
+    margin: .6rem;
+    list-style-type: none;
+}
+li a{
+    color: white;
+} 
+
+@keyframes xlr8{
+    0%{
+        transform: scale(1);
+    }
+    40%{
+        transform : scale(.8)
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}

@@ -1,0 +1,39 @@
+.container{
+    width: 98%;
+}
+.hard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.soft{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+.line{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;    
+}
+.skill{
+    margin-top: 2rem;
+}
+.column ul{
+    list-style-type: none;
+    margin-left: 3rem;
+}
+.logoimg{
+    height: 3rem;
+    width: 3rem;
+    opacity: .8;
+    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0))
+
+}
+.ang{
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    left: -.5rem;
+}

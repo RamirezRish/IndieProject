@@ -1,6 +1,22 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, .08fr);
+    min-width:101%;
+    justify-items: center;
+    
+    /* background-color: rgba(196, 37, 178, 0.504); */
+    /* margin-left: -4.34rem; */
+    /* max-height: 100rem; */
 
+}
+.sub-container{
+    position: relative;
+    top: 22rem;
+    width: 80%;
+}
 .ban{
-    display: block;
+    display: inline-block;
     position: absolute;
     min-width: 100%;
     left: .6rem;
@@ -8,5 +24,8 @@
 }
 .abMe{
     position: relative;
-    top: 17.3rem;
+    
+}
+.xp{
+    position: relative;
 }

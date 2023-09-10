@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    grid-template-columns: 2fr 2.5fr;
+    
+}
+.ttl{
+    margin-left: 2rem;
+}
+/* .xp{} */
+.separator{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.159);
+    border-radius: .3rem;
+    box-shadow: 0 0 .4rem .005rem rgba(0, 0, 0, 0.289);
+    
+}

@@ -1,8 +1,9 @@
 .banner{
-    min-width: 100%;
+    min-width: 101.6%;
     height: 15rem;
-    position: absolute;
+    position: relative;
     opacity: .84;
+
 }
 .self{
     width: 8rem;
@@ -12,7 +13,14 @@
     top: 11rem;
     left: 3rem;
     padding: .1rem;
+    -moz-transition-duration: .6s;
 }
 .self:hover{
     background-color: rgba(127, 114, 200, 0.425);
+    box-shadow: 0 0 1rem .2rem rgba(0, 0, 0, 0.4);
+}
+.container{
+    min-width: 100%;
+    position: relative;
+    left: -1rem;
 }

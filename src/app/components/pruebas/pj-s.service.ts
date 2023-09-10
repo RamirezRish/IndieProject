@@ -51,7 +51,7 @@ export class PjSService {
 
   del_char(i:number){
     this.characters.splice(i,1);
-    this.dataServices.delDate(i);
+    this.dataServices.saveDate(this.characters);
   };
 
   constructor(private alertS:WindowServiceService, private dataServices:DataServices) {}

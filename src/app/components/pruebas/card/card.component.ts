@@ -11,6 +11,7 @@ export class CardComponent implements OnInit {
 
   @Input() pjI:Character;
   @Input() i:number;
+  @Input() editor:boolean;
 
 
 
