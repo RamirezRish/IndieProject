@@ -31,6 +31,7 @@ import { HSSkillsComponent } from './h-s-skills/h-s-skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { Card01Component } from './components/card01/card01.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { EffectsComponent } from './components/pruebas/effects/effects.component';
 
 const appRoutes:Routes=[
   {path:'about-me',     component:HomeComponent},
@@ -66,6 +67,7 @@ const appRoutes:Routes=[
     ContactComponent,
     Card01Component,
     ProjectsComponent,
+    EffectsComponent,
   ],
   exports: [
   ],
