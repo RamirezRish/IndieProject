@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonGComponent implements OnInit {
 
   @Input() link1 :string;
-  @Input()value_btn :string;
+  @Input() value_btn :string;
 
 
   constructor() { }

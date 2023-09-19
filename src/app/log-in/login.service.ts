@@ -44,7 +44,7 @@ export class LoginServices{
                     firebase.auth().currentUser?.getIdToken().then(
                         tokenI=>{
                             this.token=tokenI;
-                            this.cookieSv.set("tokn",this.token);
+                            this.cookieSv.set("tkn",this.token);
                             this.router.navigate(['/pruebas']);
                         }
                     )
@@ -82,7 +82,7 @@ export class LoginServices{
     logout(){
         firebase.auth().signOut().then(()=>{
             this.token="";
-            this.cookieSv.set("tokn",this.token);
+            this.cookieSv.set("tkn","");
             this.router.navigate(['/pruebas']);
             window.location.reload();
         })
@@ -90,11 +90,11 @@ export class LoginServices{
 
     getIdToken(){
         // return this.token;
-        return this.cookieSv.get("tokn");
+        return this.cookieSv.get("tkn");
     };
     statusLog(){
         // return this.token;
-        return this.getIdToken();
+        return this.cookieSv.get("tkn");
     };
     
     

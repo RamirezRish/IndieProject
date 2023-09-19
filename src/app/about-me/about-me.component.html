@@ -1,19 +1,10 @@
 <div class="container">
     <br>
-    <h2 class="xp">About me</h2>
-    <div class="about-me">
-        <app-text-box1 class="box1 position" [Tittle]="'2'"     [textContent1]="'Lorem ipsum'"></app-text-box1>
-        <app-text-box1 class="box2 position" [Tittle]="'medio'" [textContent1]="'mucho texto 2. recordar que tengo que escribir más, más tarde. Bueno. mi día de hoy fue bastante lindo, estuve con cande, comimos, hicimos cosas lindas. Es lo más hermoso que me pasó en la vida! LA AMO'" ></app-text-box1>
+    <h2 class="tittle">About me
+        <app-button-circular1 *ngIf="validator_edit" class="edit" (click)="setEmergentForm()" ></app-button-circular1>
+    </h2>
+    <div class="subcontainer" *ngFor="let form of emFormSv.ab_me.tittle1, let i = index">
+        <app-text-box1 [Tittle1]="emFormSv.ab_me.tittle1[i]" [Tittle2]="emFormSv.ab_me.tittle2[i]" [textContent1]="emFormSv.ab_me.content1[i]" [textContent2]="emFormSv.ab_me.content2[i]" ></app-text-box1>
+        <!-- <app-modify-form *ngIf="i == secondary_coefficient"></app-modify-form> -->
     </div>
-    <div class="about-me">
-        <app-text-box1 class="box1 position" [Tittle]="'corto'" [textContent1]="''"></app-text-box1>
-        <app-text-box1 class="box2 position" [Tittle]="'medio'" [textContent1]="'mucho texto 2. recordar que tengo que escribir más, más tarde. Bueno. mi día de hoy fue bastante lindo, estuve con cande, comimos, hicimos cosas lindas. Es lo más hermoso que me pasó en la vida! LA AMO'" ></app-text-box1>
-    </div>
-    <div class="about-me">
-        <app-text-box1 class="box1 position" [Tittle]="'nada'"  [textContent1]="''"></app-text-box1>
-        <app-text-box1 class="box2 position" [Tittle]="'largo'" [textContent1]="'mucho texto 2. recordar que tengo que escribir más, más tarde. Bueno. mi día de hoy fue bastante lindo, estuve con cande, comimos, hicimos cosas lindas. Es lo más hermoso que me pasó en la vida! LA AMOmucho texto 2. recordar que tengo que escribir más, más tarde. Bueno. mi día de hoy fue bastante lindo, estuve con cande, comimos, hicimos cosas lindas. Es lo más hermoso que me pasó en la vida! LA AMO'" ></app-text-box1>
-    </div>
-    <div class="about-me">
-        <app-text-box1 class="box3 position" [Tittle]="'nada'"  [textContent1]="'mucho texto 2. recordar que tengo que escribir más, más tarde. Bueno. mi día de hoy fue bastante lindo, estuve con cande, comimos, hicimos cosas lindas. Es lo más hermoso que me pasó en la vida! LA AMOmucho texto 2. recordar que tengo que escribir más, más tarde. Bueno. mi día de hoy fue bastante lindo, estuve con cande, comimos, hicimos cosas lindas. Es lo más hermoso que me pasó en la vida! LA AMO'"></app-text-box1>
-    </div>
-</div>
+</div> 

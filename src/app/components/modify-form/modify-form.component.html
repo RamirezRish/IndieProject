@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="subcontainer">
+        <div class="editable">
+            <form class="rows" *ngFor="let form of emFormSv.ab_me.indx, let i = index">
+                <div class="box">
+                    <!-- <p>{{emFormSv.ab_me.tittle1[i]}}</p> -->
+                    <input class="tittleAbMe" type="text" name="tittle1[{{i}}]" [(ngModel)]="emFormSv.ab_me.tittle1[i]">
+
+                    <!-- <input class="content uno" type="text" value="{{emFormSv.ab_me.content1[i]}}" > -->
+                    <!-- <textarea class="content uno" name="content1" id="content1_{{i}}">{{emFormSv.ab_me.content1[i]}}</textarea> -->
+                    <textarea class="content uno" name="content1[{{i}}]" [(ngModel)]="emFormSv.ab_me.content1[i]" ></textarea>
+                </div>
+                <div class="box">
+                    <!-- <p>{{emFormSv.ab_me.tittle2[i]}}</p> -->
+                    <input class="tittleAbMe" type="text" name="tittle2[{{i}}]" [(ngModel)]="emFormSv.ab_me.tittle2[i]"> 
+
+                    <!-- <input class="content dos" type="text" value={{emFormSv.ab_me.content2[i]}} > -->
+                    <!-- <textarea class="content dos" name="content2" id="content2_{{i}}">{{emFormSv.ab_me.content2[i]}}</textarea> -->
+                    <textarea class="content dos" name="content2[{{i}}]" [(ngModel)]="emFormSv.ab_me.content2[i]" ></textarea>
+                </div>
+            </form>
+            <input class="update" type="submit" value="Update" (click)="ab_meUpd()">
+        </div>
+    </div>
+</div>
+

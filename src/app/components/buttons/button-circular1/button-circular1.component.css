@@ -1,0 +1,10 @@
+.btncr{
+    background-color: rgb(94, 115, 193);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 .3rem .2rem rgba(120, 120, 120, 0.5);
+    position: absolute;
+    right: -3rem;
+    bottom: 0;
+}

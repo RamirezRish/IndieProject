@@ -9,7 +9,9 @@ export class TextBox1Component implements OnInit {
 
 
   @Input() textContent1!:String;
-  @Input() Tittle!:String;
+  @Input() Tittle1!:String;
+  @Input() textContent2!:String;
+  @Input() Tittle2!:String;
   
 //   private exampleValue:Number= 58;
 //   public exampleText:String="contenido legible";

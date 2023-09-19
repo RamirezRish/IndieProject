@@ -7,6 +7,7 @@ import { getAnalytics }           from "firebase/analytics";
 
 import { initializeApp }          from "firebase/app";
 import { getAuth }                from "firebase/auth";
+import { DataServices } from './data.services';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { getAuth }                from "firebase/auth";
 })
 export class AppComponent implements OnInit {
   
-  constructor( private loginSv:LoginServices) {
+  constructor( private loginSv:LoginServices, private dataSv:DataServices) {
     
   }
   ngOnInit(): void{
@@ -46,7 +47,8 @@ export class AppComponent implements OnInit {
     return this.loginSv.statusLog();
   };
   toks(){
-    console.log(this.statusLog())
+    // console.log(this.statusLog())
+    console.log(this.loginSv.statusLog())
   };
 
   firebaseConfig = {
@@ -59,9 +61,12 @@ export class AppComponent implements OnInit {
     appId: "1:815202224913:web:f56746890af562305edab0",
     measurementId: "G-LV4DBDM4SN"
   };
-  
-    
+  validator1:boolean = this.dataSv.validator_edit;
+ 
 
+  getToken(){
+    console.log(this.loginSv.token)
+  }
 
 }
 

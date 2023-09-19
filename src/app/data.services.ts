@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Character } from "./components/pruebas/character.model";
 import { LoginServices } from "./log-in/login.service";
+import { HomeComponent } from "./home/home.component";
 
 @Injectable()
 
@@ -34,4 +35,10 @@ export class DataServices{
     //         error=>console.log("ERROR" + error),
     //     );
     // };
+
+    // inyección de datos por variables
+    validator_edit:boolean = true;
+
+  
+  
 }

@@ -32,6 +32,8 @@ import { ContactComponent } from './contact/contact.component';
 import { Card01Component } from './components/card01/card01.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { EffectsComponent } from './components/pruebas/effects/effects.component';
+import { ButtonCircular1Component } from './components/buttons/button-circular1/button-circular1.component';
+import { ModifyFormComponent } from './components/modify-form/modify-form.component';
 
 const appRoutes:Routes=[
   {path:'about-me',     component:HomeComponent},
@@ -68,6 +70,8 @@ const appRoutes:Routes=[
     Card01Component,
     ProjectsComponent,
     EffectsComponent,
+    ButtonCircular1Component,
+    ModifyFormComponent,
   ],
   exports: [
   ],

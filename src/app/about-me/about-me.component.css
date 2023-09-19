@@ -2,15 +2,12 @@
     /* height: 60rem; */
     position: relative;
 }
-.about-me{
-    display:inline-flex;
-    min-width: 100%;
-    border: 2px solid rgba(55, 55, 55, 0.09);
-    border-radius: .3rem;
-    margin-bottom: 2rem;
-    justify-content: space-around;
-} 
-.position{
+.subcontainer{ 
+    position: relative;
+}
+
+
+/* .position{
     margin: 2rem;
     background-color: rgb(240, 240, 240);
     border: 2px solid rgba(55, 55, 55, 0.05);
@@ -22,8 +19,18 @@
 }
 .box2{
     max-width: 30rem;
-}
+} */
 .box3{
     background-color: rgba(240, 240, 240, 0.259);
     max-width: 51rem;
 }
+.tittle{
+    display: inline-block;
+    position: relative;
+}
+ .edit{
+    opacity: .4;
+ }
+ .edit:hover{
+    opacity: 1;
+ }

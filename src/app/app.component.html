@@ -6,14 +6,14 @@
             <img class="imgpage"src="../../../assets/images/index.jpg" alt="logotype">
         </div>
         <!-- acá deberían ir un par de estos divs para esquina superior derecha (layout)-->
-        <div class="opclay"><p>Algo importante</p></div>
         <div class="opclay">                            <a href="/about-me">About me</a></div>
         <div class="opclay">                            <a href="/experience">Experience</a></div>
         <div class="opclay" *ngIf="pruebasComponent">   <a href="/pruebas">Examples</a></div>
         <div class="opclay">                            <a href="/error">Error Page</a></div>
         <div class="opclay" *ngIf="!statusLog()">                            <a routerLink="/login">Log in</a></div>
         <div class="opclay" *ngIf="statusLog()">                            <a (click)="logout()">Logout</a></div>
-        <div class="opclay" >                           <a (click)="toks()">Token Status</a></div>
+        <div class="opclay" *ngIf="validator1">                           <a (click)="toks()">Token Status</a></div>
+        <div class="opclay">                           <a (click)="getToken()">Get Token Id</a></div>
     </div>
     
 </div>

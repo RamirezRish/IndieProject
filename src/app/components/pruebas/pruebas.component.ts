@@ -3,6 +3,7 @@ import { Character } from './character.model';
 import { PjSService } from './pj-s.service';
 import { Router } from '@angular/router';
 import { LoginServices } from 'src/app/log-in/login.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-pruebas',
@@ -120,7 +121,7 @@ export class PruebasComponent  {
 
 
   // Constructor
-  constructor(private pjLS:PjSService, private router:Router, private longinSv:LoginServices){ 
+  constructor(private pjLS:PjSService, private router:Router, public loginSv:LoginServices){ 
     this.pjList=[
       {nick:"Inori"},
       {nick:"Yuu"},
@@ -128,7 +129,7 @@ export class PruebasComponent  {
       {nick:"Knd"},
       {nick:"Esdeath"}
     ];
-    if(longinSv.token){this.validator5=true};
+    if(loginSv.statusLog()){this.validator5=true};
 
     // this.characters=this.pjLS.characters
   };
