@@ -1,7 +1,9 @@
 .container{
+    /* min-width: 100%; */
+}
+.subcontainer{
     display: grid;
     grid-template-columns: 2fr 2.5fr;
-    
 }
 .ttl{
     margin-left: 2rem;

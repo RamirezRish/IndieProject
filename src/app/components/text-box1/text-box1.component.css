@@ -1,6 +1,6 @@
 .container{
     display:inline-flex;
-    min-width: 100%;
+    /* min-width: 100%; */
     border: 2px solid rgba(55, 55, 55, 0.09);
     border-radius: .3rem;
     margin-bottom: 2rem;

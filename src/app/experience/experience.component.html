@@ -1,7 +1,10 @@
 <div class="container">
     <div class="row">
-            <h2 class="xp">Experience</h2>
-        <app-text-box2 class="row" [Tittle2]="'carácter'" [textContent2]="'detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles '"></app-text-box2> 
-        <app-text-box2 class="row" [Tittle2]="'carácter'" [textContent2]="'detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles '"></app-text-box2> 
+            <h2 class="xp">Experience
+                <app-button-circular1 class="edit" *ngIf="validator_edit"  (click)="setEmergentForm(1)" ></app-button-circular1>
+            </h2>
+        <app-text-box2 class="row" *ngFor="let xp of emFormSv.exp.indx, let i = index" [Tittle2]="emFormSv.exp.tittle[i]" [textContent2]="emFormSv.exp.content[i]"></app-text-box2>
+        <!-- <app-text-box2 class="row" [Tittle2]="'carácter'" [textContent2]="'detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles '"></app-text-box2> 
+        <app-text-box2 class="row" [Tittle2]="'carácter'" [textContent2]="'detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles detalles '"></app-text-box2>  -->
     </div>
 </div>

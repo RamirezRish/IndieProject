@@ -15,8 +15,15 @@ export class ModifyFormComponent implements OnInit {
   }
 
   
+  
   ab_meUpd(){
     this.emFormSv.emergentForm()
-  }
+  };
+  ab_meDel(i:number){
+    this.emFormSv.generalDel(i);
+  };
+  ab_meAdd(){
+    this.emFormSv.generalAdd();
+  };
 
 }

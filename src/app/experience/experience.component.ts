@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmergentFormService } from '../home/emergent.form.service';
 
 @Component({
   selector: 'app-experience',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  constructor(public emFormSv:EmergentFormService) {
+    this.validator_edit = this.emFormSv.validator_edit;
+   }
 
   ngOnInit(): void {
   }
 
+  validator_edit:boolean;
+
+  setEmergentForm(i:number){
+    // this.secondary_coefficient = i
+    this.emFormSv.emergentForm();
+    this.emFormSv.setAb_xp(i)
+  }
 }

@@ -1,6 +1,7 @@
 .container{
     /* height: 60rem; */
     position: relative;
+    padding: 0;
 }
 .subcontainer{ 
     position: relative;
@@ -30,7 +31,11 @@
 }
  .edit{
     opacity: .4;
+    transition-duration: 200ms;
+
  }
  .edit:hover{
     opacity: 1;
+    scale: 1.15;
+    
  }

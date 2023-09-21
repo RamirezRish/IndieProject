@@ -29,9 +29,10 @@ export class AboutMeComponent implements OnInit {
   
   // secondary_coefficient:number = 0;
   
-  setEmergentForm(){
+  setEmergentForm(i:number){
    // this.secondary_coefficient = i
    this.emFormSv.emergentForm();
+   this.emFormSv.setAb_xp(i)
  }
   
   

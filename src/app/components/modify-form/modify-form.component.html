@@ -1,26 +1,43 @@
 <div class="container">
+    <div class="overlay" (click)="ab_meUpd()"></div>
     <div class="subcontainer">
         <div class="editable">
-            <form class="rows" *ngFor="let form of emFormSv.ab_me.indx, let i = index">
-                <div class="box">
-                    <!-- <p>{{emFormSv.ab_me.tittle1[i]}}</p> -->
-                    <input class="tittleAbMe" type="text" name="tittle1[{{i}}]" [(ngModel)]="emFormSv.ab_me.tittle1[i]">
+            <div class="ab_me" *ngIf="emFormSv.ab_xp==0">
+                <form class="rows" *ngFor="let form of emFormSv.ab_me.indx, let i = index">
+                    <div class="box">
+                        <!-- <p>{{emFormSv.ab_me.tittle1[i]}}</p> -->
+                        <input class="tittle" type="text" name="tittle1[{{i}}]" [(ngModel)]="emFormSv.ab_me.tittle1[i]">
+    
+                        <!-- <input class="content uno" type="text" value="{{emFormSv.ab_me.content1[i]}}" > -->
+                        <!-- <textarea class="content uno" name="content1" id="content1_{{i}}">{{emFormSv.ab_me.content1[i]}}</textarea> -->
+                        <textarea class="content uno" name="content1[{{i}}]" [(ngModel)]="emFormSv.ab_me.content1[i]" ></textarea>
+                    </div>
+                    <div class="box">
+                        <!-- <p>{{emFormSv.ab_me.tittle2[i]}}</p> -->
+                        <input class="tittle" type="text" name="tittle2[{{i}}]" [(ngModel)]="emFormSv.ab_me.tittle2[i]"> 
+    
+                        <!-- <input class="content dos" type="text" value={{emFormSv.ab_me.content2[i]}} > -->
+                        <!-- <textarea class="content dos" name="content2" id="content2_{{i}}">{{emFormSv.ab_me.content2[i]}}</textarea> -->
+                        <textarea class="content dos" name="content2[{{i}}]" [(ngModel)]="emFormSv.ab_me.content2[i]" ></textarea>
+                    </div>
+                    <div class="bttn p1" (click)="ab_meDel(i)" ><p>x</p></div>
+                </form>
+            </div>
+            <div class="xp" *ngIf="emFormSv.ab_xp===1">
+                <form class="rows r2"  *ngFor="let form2 of emFormSv.exp.indx, let i = index">
 
-                    <!-- <input class="content uno" type="text" value="{{emFormSv.ab_me.content1[i]}}" > -->
-                    <!-- <textarea class="content uno" name="content1" id="content1_{{i}}">{{emFormSv.ab_me.content1[i]}}</textarea> -->
-                    <textarea class="content uno" name="content1[{{i}}]" [(ngModel)]="emFormSv.ab_me.content1[i]" ></textarea>
-                </div>
-                <div class="box">
-                    <!-- <p>{{emFormSv.ab_me.tittle2[i]}}</p> -->
-                    <input class="tittleAbMe" type="text" name="tittle2[{{i}}]" [(ngModel)]="emFormSv.ab_me.tittle2[i]"> 
+                    <input class="tittle pos1" type="text" name="tittle[{{i}}]" [(ngModel)]="emFormSv.exp.tittle[i]">
 
-                    <!-- <input class="content dos" type="text" value={{emFormSv.ab_me.content2[i]}} > -->
-                    <!-- <textarea class="content dos" name="content2" id="content2_{{i}}">{{emFormSv.ab_me.content2[i]}}</textarea> -->
-                    <textarea class="content dos" name="content2[{{i}}]" [(ngModel)]="emFormSv.ab_me.content2[i]" ></textarea>
-                </div>
-            </form>
+                    <textarea class="content pos2" name="content[{{i}}]" [(ngModel)]="emFormSv.exp.content[i]"></textarea>
+                
+                    <div class="bttn p1" (click)="ab_meDel(i)" ><p>x</p></div>
+                </form>
+            </div>
+            
+            <div class="bttn p2" (click)="ab_meAdd()"><p class="addSub">Add</p></div>
             <input class="update" type="submit" value="Update" (click)="ab_meUpd()">
         </div>
+        <!-- <div class="shadow"></div> -->
     </div>
 </div>
 

@@ -1,5 +1,13 @@
+.container{
+    min-width: 100%;
+    position: relative;
+    /* left: -1rem; */
+    margin: 0;
+    padding: 0;
+}
+
 .banner{
-    min-width: 101.6%;
+    width: 100%;
     height: 15rem;
     position: relative;
     opacity: .84;
@@ -18,9 +26,4 @@
 .self:hover{
     background-color: rgba(127, 114, 200, 0.425);
     box-shadow: 0 0 1rem .2rem rgba(0, 0, 0, 0.4);
-}
-.container{
-    min-width: 100%;
-    position: relative;
-    left: -1rem;
 }

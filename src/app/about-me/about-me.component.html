@@ -1,7 +1,7 @@
 <div class="container">
     <br>
     <h2 class="tittle">About me
-        <app-button-circular1 *ngIf="validator_edit" class="edit" (click)="setEmergentForm()" ></app-button-circular1>
+        <app-button-circular1 *ngIf="validator_edit" class="edit" (click)="setEmergentForm(0)" ></app-button-circular1>
     </h2>
     <div class="subcontainer" *ngFor="let form of emFormSv.ab_me.tittle1, let i = index">
         <app-text-box1 [Tittle1]="emFormSv.ab_me.tittle1[i]" [Tittle2]="emFormSv.ab_me.tittle2[i]" [textContent1]="emFormSv.ab_me.content1[i]" [textContent2]="emFormSv.ab_me.content2[i]" ></app-text-box1>
