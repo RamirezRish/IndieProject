@@ -14,8 +14,7 @@ export class ModifyFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-  
+
   ab_meUpd(){
     this.emFormSv.emergentForm()
   };

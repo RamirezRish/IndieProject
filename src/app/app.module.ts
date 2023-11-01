@@ -36,7 +36,7 @@ import { ButtonCircular1Component } from './components/buttons/button-circular1/
 import { ModifyFormComponent } from './components/modify-form/modify-form.component';
 
 const appRoutes:Routes=[
-  {path:'about-me',     component:HomeComponent},
+  {path:'home',         component:HomeComponent},
   {path:'',             component:HomeComponent},
   {path:'experience',   component:ExperienceComponent},
   {path:'pruebas',      component:PruebasComponent},

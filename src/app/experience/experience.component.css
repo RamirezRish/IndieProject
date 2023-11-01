@@ -2,8 +2,9 @@
     border: 2px solid rgba(55, 55, 55, 0.09);
     border-radius: .3rem;
     width: 100%;
-    display: block;
+    display: grid;
     position: relative;
+    top: 4rem;
 }
 .row{
     margin-top: .5rem;

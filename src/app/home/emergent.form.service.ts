@@ -11,12 +11,16 @@ export class EmergentFormService {
   ab_xp:number=1;
   validator_edit:boolean = true;
   validator_emergentForm:boolean = false;
+  visibility:string="";
+
+
 
   edit(){
     this.validator_edit = !this.validator_edit
   };
   emergentForm(){
     this.validator_emergentForm = !this.validator_emergentForm;
+    if(this.visibility == ""){this.visibility = "active-visibility"} else {this.visibility = ""}
   };
   setAb_xp(i:number){
     this.ab_xp=i;

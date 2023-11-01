@@ -8,8 +8,9 @@
     margin-top: 4rem;
 } */
 .container{
-    /* background-color: rgb(225, 224, 224); */
-    margin: 0 -1rem auto -.2rem;
+    background-color: rgb(220, 220, 220);
+    /* margin: 0 -1rem auto -.2rem; */
+    margin: 0;
     top: 0;
     width: 100%;
     min-height: 100vh;
@@ -81,8 +82,9 @@
 .imgp:hover{
     opacity:1
 }
-.router{
-    position: absolute;
+
+router-outlet{
+    position: relative;
     width: calc(100% - .8rem);
     padding: 0;
     margin: 0;

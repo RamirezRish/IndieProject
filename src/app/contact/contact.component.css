@@ -1,14 +1,13 @@
 .container{
-    background-color: rgb(95, 92, 92);
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: azure;
-    position: absolute;
+    /* position: relative; */
     width: 100%;
-    padding: 2rem;
     height: 14rem;
-    left: 0rem;
-    bottom:0;
+    padding: 2rem;
+    /* left: 0rem; */
+    /* bottom:0; */
     align-items: center;
     min-width: 100%;
 

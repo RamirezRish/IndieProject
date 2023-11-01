@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     /* background-color: aquamarine; */
+    position: relative;
+    top:6rem;
 }
 .cont1{
     height: 40rem;

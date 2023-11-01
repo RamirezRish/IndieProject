@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" [ngClass]="{'active-visibility':emFormSv.visibility}">
     <div class="overlay" (click)="ab_meUpd()"></div>
-    <div class="subcontainer">
+    <div class="subcontainer" [ngClass]="{'active-visibility':emFormSv.visibility}">
         <div class="editable">
             <div class="ab_me" *ngIf="emFormSv.ab_xp==0">
                 <form class="rows" *ngFor="let form of emFormSv.ab_me.indx, let i = index">

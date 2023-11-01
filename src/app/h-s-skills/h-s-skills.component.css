@@ -1,6 +1,10 @@
 .container{
     width: 98%;
 }
+.ttl{
+    position: relative;
+    display: inline-block;
+}
 .hard{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,8 +33,17 @@
     width: 3rem;
     opacity: .8;
     filter: drop-shadow(0 0 .5rem rgb(0, 0, 0))
-
 }
+/* .edit{
+    opacity: .4;
+    transition-duration: 200ms;
+    position: absolute;
+    top: 2.5rem;
+ }
+ .edit:hover{
+    opacity: 1;
+    scale: 1.02;
+ } */
 .ang{
     height: 4rem;
     width: 4rem;

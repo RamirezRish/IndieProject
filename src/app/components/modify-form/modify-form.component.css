@@ -1,3 +1,4 @@
+
 .container{
     position: fixed;
     min-width: 100vw;
@@ -7,21 +8,66 @@
     align-items: center;
     justify-content: center;
     display: grid;
+
+    /* transition: ease-in .2s ; */
+
+    /* visibility: hidden; */
+    /* opacity: 0; */
+
 }
+
+
 .overlay{
     min-width: 100%;
     min-height: 100%;
     background-color: rgba(56, 56, 56, 0.622);
     position: absolute;
+    
 }
 .subcontainer{
     background-color: rgb(211, 211, 211);
     position: relative;
     border-radius: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    display: grid;
+    
+    transition: ease-in .2s ;
+    
+    visibility: hidden;
+    opacity: 0;
+    
+    
+    /* transition: opacity 0.3s ease, height 0.3s ease;  */
+    /* transition: ease all 1s; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
+/* .subcontainer.active-visibility{
+    visibility: visible;
+    opacity: 1; 
+} */
+/* .container.active-visibility{
+    visibility: visible;
+    opacity: 1;
+} */
+/* .container:hover .subcontainer{
+    visibility: visible;
+    opacity: 1; 
+} */
+/* .container:focus .subcontainer{
+    visibility: visible;
+    opacity: .5;
+} */
+
+/* PARA QUE LA TRANSICIÓN SE EFECTÚE (POPUP SUAVE) RECURRO A UNA ANIMACIÓN, YA QUE LA TRANSICIÓN MISMA NO SE APLICA. */
+.container .subcontainer{
+    animation: popup 1s ;
+    visibility: visible;
+    opacity: 1;
+}
+@keyframes popup{
+    from{visibility: hidden; opacity: 0;}
+    to{visibility: visible; opacity: 1;}
+}
+
 .editable{
     width: 58rem;
     height: 28rem;
@@ -98,6 +144,9 @@
     background-color:  rgb(211, 211, 211);
     border: none;
 }
+
+
+
 
 .editable::-webkit-scrollbar{
     width: 6px;

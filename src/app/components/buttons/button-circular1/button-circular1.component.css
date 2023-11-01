@@ -7,4 +7,12 @@
     position: absolute;
     right: -3rem;
     bottom: 0;
+    opacity: .4;
+    transition-duration: 200ms;
+    position: absolute;
+    /* top: 2.5rem; */
 }
+.btncr:hover{
+    opacity: 1;
+    scale: 1.02;
+ }
