@@ -1,4 +1,4 @@
-<div class="container">  
+<div class="container">
     <div class="router">
         <router-outlet></router-outlet>
     </div>
@@ -8,14 +8,14 @@
             <img class="imgpage"src="../../../assets/images/index.jpg" alt="logotype">
         </div>
         <!-- acá deberían ir un par de estos divs para esquina superior derecha (layout)-->
-        <div class="opclay">                            <a href="/home">About me</a></div>
-        <div class="opclay">                            <a href="/experience">Experience</a></div>
-        <div class="opclay" *ngIf="pruebasComponent">   <a href="/pruebas">Examples</a></div>
-        <div class="opclay">                            <a href="/error">Error Page</a></div>
-        <div class="opclay" *ngIf="!statusLog()">                            <a routerLink="/login">Log in</a></div>
-        <div class="opclay" *ngIf="statusLog()">                            <a (click)="logout()">Logout</a></div>
-        <div class="opclay" *ngIf="validator1">                           <a (click)="toks()">Token Status</a></div>
-        <div class="opclay">                           <a (click)="getToken()">Get Token Id</a></div>
+        <!-- <div class="opclayB efect">                            <a href="/home">About me</a></div> -->
+        <!-- <div class="opclayB efect">                            <a href="/experience">Experience</a></div> -->
+        <!-- <div class="opclayB efect" *ngIf="pruebasComponent">   <a href="/pruebas">Examples</a></div> -->
+        <!-- <div class="opclayB efect">                            <a href="/error">Error Page</a></div> -->
+        <div class="opclayB efect" *ngIf="!statusLog()">                            <a routerLink="/login">Log in</a></div>
+        <div class="opclayB efect" *ngIf="statusLog()">                            <a (click)="logout()">Logout</a></div>
+        <!-- <div class="opclayB efect" *ngIf="validator1">                           <a (click)="toks()">Token Status</a></div> -->
+        <!-- <div class="opclayB efect">                           <a (click)="getToken()">Get Token Id</a></div> -->
     </div>
     
 </div>

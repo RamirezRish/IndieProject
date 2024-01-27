@@ -1,11 +1,18 @@
 <div class="containerg">
     <app-banner class="ban"></app-banner>
     <div class="sub-container">
-        <app-about-me class="abMe"></app-about-me>
-        <br>
-        <app-experience class="xp"></app-experience>
-        <app-h-s-skills class="hs"></app-h-s-skills>
-        <app-projects></app-projects>
+        <div class="row" id="aboutMe">
+            <app-about-me class="abMe"></app-about-me>
+        </div>
+        <div class="row" id="experience">
+            <app-experience class="xp"></app-experience>
+        </div>
+        <div class="row dark" id="hard&softs">
+            <app-h-s-skills class="hs"></app-h-s-skills>
+        </div>
+        <div class="row dark" id="projects">
+            <app-projects></app-projects>
+        </div>
 
         <!-- ÚLTIMO (dentro de sub-container)-->
         <app-modify-form *ngIf="this.emFormSv.validator_emergentForm" ></app-modify-form>

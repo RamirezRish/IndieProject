@@ -3,7 +3,7 @@
     position: relative;
     padding: 0;
 }
-.subcontainer{ 
+.subcontainer{
     position: relative;
 }
 
@@ -22,19 +22,20 @@
     max-width: 30rem;
 } */
 .box3{
-    background-color: rgba(240, 240, 240, 0.259);
+    /* background-color: rgba(240, 240, 240, 0.259); */
+    /* background-color: var(--prm11); */
     max-width: 51rem;
 }
 .tittle{
     display: inline-block;
     position: relative;
 }
- /* .edit{
+/* .edit{
     opacity: .4;
     transition-duration: 200ms;
 
- }
- .edit:hover{
+}
+.edit:hover{
     opacity: 1;
     scale: 1.15;
     

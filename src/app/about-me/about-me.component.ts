@@ -8,7 +8,7 @@ import { EmergentFormService } from '../home/emergent.form.service';
 })
 export class AboutMeComponent implements OnInit {
   
-  constructor(public emFormSv:EmergentFormService) { 
+  constructor(public emFormSv:EmergentFormService) {
     // this.tittle1 = emergentFormSv.tittle1;
     // this.tittle2 = emergentFormSv.tittle2;
     // this.content1 = emergentFormSv.content1;
@@ -22,7 +22,7 @@ export class AboutMeComponent implements OnInit {
   
   // tittle1:string  [] = [];
   // tittle2:string  [] = [];
-  // content1:string [] = [];  
+  // content1:string [] = [];
   // content2:string [] = [];
   ab_me:any={}
   validator_edit:boolean;
@@ -30,10 +30,10 @@ export class AboutMeComponent implements OnInit {
   // secondary_coefficient:number = 0;
   
   setEmergentForm(i:number){
-   // this.secondary_coefficient = i
-   this.emFormSv.emergentForm();
-   this.emFormSv.setAb_xp(i)
- }
+  // this.secondary_coefficient = i
+    this.emFormSv.emergentForm();
+    this.emFormSv.setAb_xp(i)
+  }
   
   
   

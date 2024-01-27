@@ -1,7 +1,8 @@
 .container{
     display:inline-flex;
     /* min-width: 100%; */
-    border: 2px solid rgba(55, 55, 55, 0.09);
+    /* border: 2px solid rgba(55, 55, 55, 0.09); */
+    border: 2px solid var(--scnd10);
     border-radius: .3rem;
     margin-bottom: 2rem;
     justify-content: space-around;
@@ -16,9 +17,11 @@
 
 .position{
     margin: 2rem;
-    background-color: rgb(240, 240, 240);
-    border: 2px solid rgba(55, 55, 55, 0.05);
-    border-radius: .3px;
+    /* background-color: rgb(240, 240, 240); */
+    /* border: 2px solid rgba(55, 55, 55, 0.05); */
+    background-color: var(--prm2);
+    border: 2px solid var(--scnd10);
+    border-radius: 3px;
     position: relative;
 }
 .uno{

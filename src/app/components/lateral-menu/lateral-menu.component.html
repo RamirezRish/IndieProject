@@ -1,13 +1,15 @@
 
 <!-- <div class="opacity"></div> -->
-<div>  
-    <div class="overlay {{visibility}}" id="overlay">
+<div>
+    <!-- llevaba id="overlay" -->
+    <div class=" {{visibility}} container ">
+        <div class="overlay {{visibility}}" (click)="open(1)"></div>
         <div class="popup {{visibility}}">
             <ul class="list">
-                <li><a class="menu-option" href="#">About me</a></li>
-                <li><a class="menu-option" href="#">About me</a></li>
-                <li><a class="menu-option" href="#">About me</a></li>
-                <li><a class="menu-option" href="#">About me</a></li>
+                <li><a class="menu-option" href="#aboutMe"      (click)="open(1)">  About me            </a></li>
+                <li><a class="menu-option" href="#experience"   (click)="open(1)">  Experience          </a></li>
+                <li><a class="menu-option" href="#hard&soft"    (click)="open(1)">  Hard & Soft Skills  </a></li>
+                <li><a class="menu-option" href="#projects"     (click)="open(1)">  Projects            </a></li>
             </ul>
         </div>
     </div>

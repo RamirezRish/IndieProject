@@ -8,7 +8,7 @@
     margin-top: 4rem;
 } */
 .container{
-    background-color: rgb(220, 220, 220);
+    background-color: var(--prm1);
     /* margin: 0 -1rem auto -.2rem; */
     margin: 0;
     top: 0;
@@ -26,7 +26,7 @@
 
 }
 .layout{
-    background-color: rgb(156, 177, 213);
+    background-color: var(--prm7);
     /* padding-right: 2rem; */
     
     width: 100%;
@@ -52,33 +52,61 @@
     border: 2px rgba(53, 92, 133, 0.617) groove;
 }
 .opclay{
-    background-color: rgba(72, 126, 184, 0.617);
+    /* background-color: rgba(72, 126, 184, 0.617); */
+    /* background-color: var(--prm4); */
+    background-image: linear-gradient(40deg, var(--prm4), var(--prm5), var(--prm6));
     min-width: 6.5rem;
     text-align: center;
     margin: 4px;
     padding: 2px;
-    opacity: .8;
+    /* opacity: .8; */
     border-radius: .2rem;
-    border: 2px rgba(53, 92, 133, 0.617) groove;
-    box-shadow: 2px 2px rgba(31, 55, 81, 0.836);
-    font-size: .8rem;  
+    border: 2px var(--scnd4) groove;
+    box-shadow: -2px 2px var(--prm1);
+    font-size: .8rem;
     
     height: 1.7rem;
     -moz-transition-duration: 350ms;
 }
-.opclay a{
-    color: rgb(233, 233, 233);
+.efect a{
+    color: var(--prm1);
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 700;
 }
-.opclay:hover{
+.efect:hover{
     opacity: 1;
-    box-shadow: 0 0 .8rem .1rem rgba(0, 0, 0, 0.5);
-    background-color: rgba(72, 126, 184, 0.8);
+    box-shadow: 0 0 0rem 0rem rgba(0, 0, 0);
+    background-image: none;
+    background-color: var(--prm2);
     cursor:pointer;
-
 }
+.efect:hover a{
+    color: var(--prm7);
+}
+.opclayB{
+    background-color: var(--prm4);
+    position: relative;
+    display: flex;
+    min-width: 6.5rem;
+    /* text-align: center; */
+    opacity: .8;
+    font-size: .8rem;
+    min-height: 2.3rem;
+    align-items: center;
+    justify-content: center;
+
+    
+    /* box-shadow: 2px 2px var(--prm1); */
+    /* margin: 4px;
+    padding: 2px; */
+    /* border-radius: .2rem; */
+    /* border: 2px var(--scnd4) groove; */
+    
+    height: 1.7rem;
+    -moz-transition-duration: 350ms;
+}
+
 .imgp:hover{
     opacity:1
 }

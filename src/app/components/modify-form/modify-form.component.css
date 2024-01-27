@@ -42,7 +42,7 @@
 }
 /* .subcontainer.active-visibility{
     visibility: visible;
-    opacity: 1; 
+    opacity: 1;
 } */
 /* .container.active-visibility{
     visibility: visible;
@@ -50,7 +50,7 @@
 } */
 /* .container:hover .subcontainer{
     visibility: visible;
-    opacity: 1; 
+    opacity: 1;
 } */
 /* .container:focus .subcontainer{
     visibility: visible;
@@ -81,7 +81,7 @@
     display: grid;
     position: relative;
     grid-template-columns: 1fr 2fr;
-    gap: 1rem;   
+    gap: 1rem;
 }
 .r2{
     margin: 1rem 0 2rem 0;
@@ -101,7 +101,7 @@
     border:2px solid rgba(255, 255, 255, 0.527);
     padding: 1rem;
     box-shadow: 0 0 .3rem .1rem rgb(74, 74, 74);
-    resize: none   
+    resize: none;
 }
 
 .p1{
@@ -119,7 +119,7 @@
     background-color: rgba(255, 255, 255, .7);
     border-radius: 50%;
     border: rgba(60, 60, 60, 0.7) solid 1px;
-    width: 2rem; 
+    width: 2rem;
     height: 2rem;
     align-self: center;
     transition-duration: 250ms;

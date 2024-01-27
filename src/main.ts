@@ -10,3 +10,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+
+//     --OCULTA LA BARRA DE NAVEGACIÓN
+// document.addEventListener("scroll", function() {
+//     Realiza aquí cualquier lógica adicional según tus necesidades
+// });

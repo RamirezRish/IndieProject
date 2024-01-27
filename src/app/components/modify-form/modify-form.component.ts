@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EmergentFormService } from 'src/app/home/emergent.form.service';
+
 
 @Component({
   selector: 'app-modify-form',
@@ -25,4 +26,8 @@ export class ModifyFormComponent implements OnInit {
     this.emFormSv.generalAdd();
   };
 
+  // @HostListener('wheel', ['$event'])
+  // handleWheel(event: WheelEvent):void{
+  //   event.stopPropagation();
+  // }
 }

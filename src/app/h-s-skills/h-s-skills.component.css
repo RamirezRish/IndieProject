@@ -1,32 +1,55 @@
 .container{
     width: 98%;
 }
-.ttl{
+.tittle{
+    /* background-color: gray; */
     position: relative;
+}
+.a{
+    /* background-color: aqua; */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0; */
+}
+
+.ttl{
+    /* position: absolute; */
     display: inline-block;
 }
+
+.invs{
+    max-height: 0;
+    opacity: 0;
+    /* transform: scaleY(.01); */
+    transition: .1s ease-in;
+}
+.container:target .invs{
+    max-height: max-content;
+    opacity: 1;
+    /* transform: scaleY(1); */
+}
+
+/* HARD S */
 .hard{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.soft{
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
+    gap: 1rem;
 }
-.line{
+.lines{
+    display: grid;
+    margin: 2px;
+    
+}
+.columns{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 1rem;
-    margin-left: 3rem;
-    margin-right: 3rem;    
+    /* gap: .5rem; */
 }
 .skill{
-    margin-top: 2rem;
-}
-.column ul{
-    list-style-type: none;
-    margin-left: 3rem;
+    /* margin-top: 2rem; */
+    /* background-color: blue; */
 }
 .logoimg{
     height: 3rem;
@@ -34,19 +57,32 @@
     opacity: .8;
     filter: drop-shadow(0 0 .5rem rgb(0, 0, 0))
 }
-/* .edit{
-    opacity: .4;
-    transition-duration: 200ms;
-    position: absolute;
-    top: 2.5rem;
- }
- .edit:hover{
-    opacity: 1;
-    scale: 1.02;
- } */
-.ang{
-    height: 4rem;
-    width: 4rem;
+
+
+
+
+.soft{
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+.column ul{
+    /* list-style-type: none; */
+    /* margin-left: 3rem; */
+}
+.column ul li{
+    margin-bottom: .5rem;
     position: relative;
     left: -.5rem;
+}
+.edit{
+    opacity: .4;
+    transition-duration: 200ms;
+    /* position: absolute; */
+    top: 2.5rem;
+}
+.edit:hover{
+    opacity: 1;
+    scale: 1.02;
 }

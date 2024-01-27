@@ -19,7 +19,7 @@ export class LateralMenuComponent implements OnInit {
 
   }
 
- 
+
   visibility:string;
 
   open(i:number){

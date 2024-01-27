@@ -12,8 +12,11 @@
 .separator{
     width: 100%;
     height: 2px;
-    background-color: rgba(0, 0, 0, 0.159);
+    /* background-color: rgba(0, 0, 0, 0.159); */
+    /* background-color: var(--prm1); */
+    background-color: white;
     border-radius: .3rem;
-    box-shadow: 0 0 .4rem .005rem rgba(0, 0, 0, 0.289);
+    /* box-shadow: 0 0 .4rem .005rem rgba(0, 0, 0, 0.289); */
+    box-shadow: 0 0 .5rem 1px var(--scnd10);
     
 }

@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HardS } from '../models/HardS';
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +9,7 @@ export class EmergentFormService {
 
   constructor() { };
 
-  // inyección de datos por variables
+  // DATA INJECTION BY VARIABLES
   ab_xp:number=1;
   validator_edit:boolean = true;
   validator_emergentForm:boolean = false;
@@ -27,7 +29,7 @@ export class EmergentFormService {
   }
   
 
-        // contenido del about me
+    // CONTENT OF: ABOUT-ME
     ab_me:any={
       tittle1: ["UNO1","DOS1","TRES1"],
       tittle2: ["UNO2","DOS2","TRES2"],
@@ -40,7 +42,7 @@ export class EmergentFormService {
         "21Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae dolor sunt ullam veniam assumenda distinctio magnam atque vero cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae dolor sunt ullam veniam assumenda distinctio magnam atque vero cumque! ",
         "22Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae dolor sunt ullam veniam assumenda distinctio magnam atque vero cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae dolor sunt ullam veniam assumenda distinctio magnam atque vero cumque! ",
         "23Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae dolor sunt ullam veniam assumenda distinctio magnam atque vero cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae dolor sunt ullam veniam assumenda distinctio magnam atque vero cumque! "
-      ], 
+      ],
       indx:[0,0,0],
       constructor(tittle1:string, tittle2:string, content1:string, content2:string){
         this.tittle1.push(tittle1);
@@ -48,11 +50,11 @@ export class EmergentFormService {
         this.content1.push(content1);
         this.content2.push(content2);
         this.indx.push(0);
-      }  
+      }
     };
 
     
-        // contenido del experience
+    // CONTENT OF: EXPERIENCE
     exp:any={
       tittle: ["UNO1","DOS1","TRES1"],
       content:[
@@ -69,7 +71,30 @@ export class EmergentFormService {
     };
 
 
-        // modificación de contenidos
+    // CONTENT OF: HARD & SOFT SKILLS
+    hardS:HardS[]=[
+      new HardS ("HTML","../../assets/images/htmlimg.avif","hard skill 1",0),
+      new HardS ("CSS","../../assets/images/CSS3img.svg.png","hard skill 2",1),
+      new HardS ("TypeScript","../../assets/images/tsimg.png","hard skill 3",2),
+      new HardS ("Angular","../../assets/images/angularimg.svg.png","hard skill 4",3),
+      new HardS ("Git","../../assets/images/angularimg.svg.png","hard skill 4",4),
+      new HardS ("Java","../../assets/images/angularimg.svg.png","hard skill 4",5),
+      new HardS ("SpringBoot","../../assets/images/angularimg.svg.png","hard skill 4",6),
+      new HardS ("Firebase","../../assets/images/angularimg.svg.png","hard skill 4",7),
+      new HardS ("Netlify","../../assets/images/angularimg.svg.png","hard skill 4",8),
+      new HardS ("Bootstrap","../../assets/images/angularimg.svg.png","hard skill 4",9),
+      new HardS ("VSCode","../../assets/images/angularimg.svg.png","hard skill 4",10),
+    ];
+
+
+
+    addHS(ttl:string,urlImg:string, desc:string){
+      this.hardS.push(new HardS(ttl,urlImg,desc,(this.hardS[this.hardS.length-1].index+1),))
+      console.log(this.hardS);
+    };
+
+
+    // MODIFY CONTENTS
 
     generalUpd(totalInfo:any, code:string){
       // para about me
