@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmergentFormService } from '../home/emergent.form.service';
+import { EditService } from '../services/edit.service';
 
 @Component({
   selector: 'app-experience',
@@ -8,9 +9,13 @@ import { EmergentFormService } from '../home/emergent.form.service';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor(public emFormSv:EmergentFormService) {
-    this.validator_edit = this.emFormSv.validator_edit;
-   }
+  constructor(
+    public emFormSv:EmergentFormService,
+    private editSv:EditService
+  ) {
+    // this.validator_edit = this.emFormSv.validator_edit;
+    this.validator_edit = this.editSv.edit
+  }
 
   ngOnInit(): void {
   }

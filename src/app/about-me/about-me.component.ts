@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmergentFormService } from '../home/emergent.form.service';
+import { EditService } from '../services/edit.service';
 
 @Component({
   selector: 'app-about-me',
@@ -8,13 +9,18 @@ import { EmergentFormService } from '../home/emergent.form.service';
 })
 export class AboutMeComponent implements OnInit {
   
-  constructor(public emFormSv:EmergentFormService) {
+  constructor(
+    public emFormSv:EmergentFormService,
+    private editSv:EditService
+  ) {
     // this.tittle1 = emergentFormSv.tittle1;
     // this.tittle2 = emergentFormSv.tittle2;
     // this.content1 = emergentFormSv.content1;
     // this.content2 = emergentFormSv.content2;
     // this.ab_me=this.emFormSv.ab_me;
-    this.validator_edit = this.emFormSv.validator_edit;
+
+    // this.validator_edit = this.emFormSv.validator_edit;
+    this.validator_edit = this.editSv.edit
   }
   
   

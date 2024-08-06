@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EditService } from '../services/edit.service';
 import { LoginServices } from './login.service';
 
 @Component({
@@ -9,7 +11,8 @@ import { LoginServices } from './login.service';
 })
 export class LogInComponent implements OnInit {
 
-  constructor( private loginSv:LoginServices) { }
+  constructor( private loginSv:LoginServices, editSv:EditService, router:Router) { 
+  }
 
   ngOnInit(): void {
   }
@@ -24,9 +27,9 @@ export class LogInComponent implements OnInit {
 
 
   login(form:NgForm){
-     const email=form.value.email;
-     const password=form.value.password;
-     this.loginSv.login(email,password);
+    const email=form.value.email;
+    const password=form.value.password;
+    this.loginSv.login(email,password);
   };
   signUpIn(){
     this.conditional1 = !this.conditional1;
@@ -35,10 +38,8 @@ export class LogInComponent implements OnInit {
 
   register(form:NgForm){
     this.conditional1 = !this.conditional1;
-    const email=form.value.email;
-    const password=form.value.password;
-    console.log("Registrado con email " + email + " existosamente.");
-    this.loginSv.register(email, password);
+    // console.log("Registrado con email " + form.value.email + " existosamente.");
+    this.loginSv.register(form.value.email, form.value.password);
   };
 
 }

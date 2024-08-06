@@ -1,4 +1,7 @@
 <div class="container">
+
+
+<!-- LOGIN -->
     <div class="cont1" *ngIf="conditional1">
         <h2 class="ttl">Sign In</h2>
         <!-- <h2 class="ttl" *ngIf="!conditional1">Sign Up</h2> -->
@@ -16,7 +19,10 @@
             </div>
         </form>
     </div>
-    <div class="one" *ngIf="!conditional1">    
+
+
+<!-- LOGUP -->
+    <div class="one" *ngIf="!conditional1">
         <div class="cont1" >
             <h2 class="ttl">Sign Up</h2>
             <!-- <h2 class="ttl" *ngIf="!conditional1">Sign Up</h2> -->
@@ -32,4 +38,5 @@
             </form>
         </div>
     </div>
+
 </div>

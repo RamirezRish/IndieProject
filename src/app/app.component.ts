@@ -1,12 +1,12 @@
-import { Component, OnInit }      from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import firebase                   from 'firebase/compat/app'
-import { LoginServices }          from './log-in/login.service';
+import firebase from 'firebase/compat/app';
+import { getFirestore } from "firebase/firestore";
 
-import { getAnalytics }           from "firebase/analytics";
+// import { collection, collectionData, getFirestore } from '@angular/fire/firestore';
 
-import { initializeApp }          from "firebase/app";
-import { getAuth }                from "firebase/auth";
+import { LoginServices } from './log-in/login.service';
+
 import { DataServices } from './data.services';
 
 
@@ -18,20 +18,29 @@ import { DataServices } from './data.services';
 export class AppComponent implements OnInit {
   
   constructor( private loginSv:LoginServices, private dataSv:DataServices) {
-    
   }
   ngOnInit(): void{
-      // Initialize Firebase (alternative #1)
-      firebase.initializeApp({
-      apiKey: "AIzaSyDRqAfzsNjmgfb6mBGv8cC7WO7gOOjxx_M",
-      authDomain: "portfolio-ang-01.firebaseapp.com",
-    });
+// Initialize Firebase (alternative #1)
 
-      // Initialize Firebase (alternative #2)
+    const app = firebase.initializeApp(
+      // {
+      // apiKey: "AIzaSyDRqAfzsNjmgfb6mBGv8cC7WO7gOOjxx_M",
+      // authDomain: "portfolio-ang-01.firebaseapp.com",
+      // }
+      this.firebaseConfig
+    );
+    const db = getFirestore(app);
+    this.dataSv.setDb(db);
+    // console.log(db);
+    
+    
+
+// Initialize Firebase (alternative #2)
     // const app = initializeApp(this.firebaseConfig);
     // const analytics = getAnalytics(app);
 
-    // Initialize Firebase (alternative #3)
+
+// Initialize Firebase (alternative #3)
     // const app = initializeApp(this.firebaseConfig);
     // const auth = getAuth(app);
 
@@ -62,11 +71,30 @@ export class AppComponent implements OnInit {
     measurementId: "G-LV4DBDM4SN"
   };
   validator1:boolean = this.dataSv.validator_edit;
- 
+
 
   getToken(){
     console.log(this.loginSv.token)
   }
+
+
+  // de prueba
+  // getAboutMe():Observable<AboutMe[]>{
+  //   console.log(". . .");
+    
+  //   // this.dataSv.getDocs
+  
+  //   const _firestore = getFirestore()
+  //   const _collection = collection(_firestore,"aboutMe");
+  //   // console.log(_firestore, " --- ", _collection)
+
+  //   // return collectionData(_collection,{idField:'id'}) as Observable <AboutMe[]>
+      
+  // };
+
+
+
+
 
 }
 

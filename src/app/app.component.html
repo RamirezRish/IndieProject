@@ -12,8 +12,9 @@
         <!-- <div class="opclayB efect">                            <a href="/experience">Experience</a></div> -->
         <!-- <div class="opclayB efect" *ngIf="pruebasComponent">   <a href="/pruebas">Examples</a></div> -->
         <!-- <div class="opclayB efect">                            <a href="/error">Error Page</a></div> -->
-        <div class="opclayB efect" *ngIf="!statusLog()">                            <a routerLink="/login">Log in</a></div>
-        <div class="opclayB efect" *ngIf="statusLog()">                            <a (click)="logout()">Logout</a></div>
+        <div class="opclayB efect">                            <a  class="btn12">get AboutMe </a></div>
+        <div class="opclayB efect" *ngIf="!statusLog()">                            <a routerLink="/login" class="btn12">Log in</a></div>
+        <div class="opclayB efect" *ngIf="statusLog()">                            <a (click)="logout()" class="btn12">Logout</a></div>
         <!-- <div class="opclayB efect" *ngIf="validator1">                           <a (click)="toks()">Token Status</a></div> -->
         <!-- <div class="opclayB efect">                           <a (click)="getToken()">Get Token Id</a></div> -->
     </div>

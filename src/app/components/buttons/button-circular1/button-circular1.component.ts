@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button-circular1',
@@ -7,10 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonCircular1Component implements OnInit {
   
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
+
 
   funct(){
     
